@@ -17,12 +17,14 @@ def main(
     element: str = "RR",
     year_clim_i: int = 1991,
     year_clim_f: int = 2020,
-    year_i=2022,
-    year_f=2024,
+    year_i: int = 2022,
+    year_f: int = 2024,
 ):
     # Settings
     # weather parameter
     param = "tp24"
+    if element != 'RR':
+        raise ValueError(f'No associated param for {element=}')
 
     # Get station list and metadata
 

@@ -178,27 +178,10 @@ def main(
 
         coords = dict(
             time=tim[dok],
-            stnid=[
-                stnid,
-            ],
-            lat=(
-                "stnid",
-                [
-                    np.round(lats[icnt], 2),
-                ],
-            ),
-            lon=(
-                "stnid",
-                [
-                    np.round(lons[icnt], 2),
-                ],
-            ),
-            elevation=(
-                "stnid",
-                [
-                    np.round(elevs[icnt], 2),
-                ],
-            ),
+            stnid=[stnid, ],
+            lat=("stnid", [np.round(lats[icnt], 2), ]),
+            lon=("stnid", [np.round(lons[icnt], 2), ]),
+            elevation=("stnid", [np.round(elevs[icnt], 2)]),
         )
 
         # ouput dataset for one stations
